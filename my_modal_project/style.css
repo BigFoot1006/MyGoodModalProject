@@ -1,0 +1,145 @@
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0; 
+}
+html {
+    background-image: url('../my_modal_project/lake.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.button {
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    background-color: #cc4331;
+    color:white;
+    border-radius: 5px;
+    padding: 10px 50px 10px;
+    box-shadow: 1px 1px #555, 2px 2px rgb(64, 4, 64);
+    transition: all 100ms ease-in-out;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.button:hover {
+    background-color: #722016;
+    box-shadow: 1px 2px #c4402f, 2px 1px rgb(161, 29, 161);   
+}
+.button:active {
+    position: relative;
+    margin-top: 2px;
+    margin-left: 2px; 
+    box-shadow: none;
+
+} 
+
+#modal_background {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    
+
+}
+#modal_background.active {
+    opacity: 1;
+    z-index: 10;
+    transition: opacity 250ms ease-in-out, z-index 250ms ease-in-out;
+    
+}
+#modal_box {
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 25px;
+    max-width: 800px;
+    min-width: 600px;
+
+    opacity: 0;
+    z-index: -10;
+
+    transform: translate(-50%, -50%);
+           
+    font-family: 'Sonsie One', cursive;
+    
+}
+
+#modal_box.active {
+    position: fixed;
+    opacity: 1;
+    z-index: 11;
+    transition: opacity 700ms ease-in-out, z-index 700ms ease-in-out;
+}
+.text_right {
+    text-align: right;
+}
+.button_close {
+    background-color: white;
+    border-style: none;
+    color: #999;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px #555, 0 1px 0 2px rgb(215, 93, 40);
+}
+.button_close:hover {
+    color:#d25544;
+    background-color: white;
+}
+.button_close:active {
+    margin-right: -2px;
+    margin-bottom: -1px;
+    box-shadow: none;
+    border: 1px solid #d25544;
+    
+    
+}
+.button_accept {
+    background-color: #d25544;
+    border-style: none;
+    color: white;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px #555, 0 1px 0 2px rgb(215, 93, 40);
+}
+.button_accept:hover {
+    color:#d25544;
+    background-color: white;
+}
+.button_accept:active {
+    box-shadow: none;
+    border: 1px solid #d25544;
+    margin-right: -2px;
+    margin-bottom: -1px;
+} 
+
+
+.myapp {
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    background-image: url('../my_modal_project/click.jpg');
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -15;
+    
+    
+    
+}
+.myapp.active {
+    opacity: 1;
+    z-index: 30;
+    
+    
+}
